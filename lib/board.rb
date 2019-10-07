@@ -14,7 +14,7 @@ class Board
   end
 
   def generate_board
-    @table = TTY::Table.new headers: headers, rows: build_rows
+    @table = TTY::Table.new headers, build_rows
   end
 
   def build_rows
@@ -24,7 +24,7 @@ class Board
     end
 
     rows.each do |r|
-      6.times do
+      7.times do
         r << empty_string
       end
     end
@@ -37,21 +37,6 @@ class Board
 
   def headers
     [0, 1, 2, 3, 4, 5, 6]
-  end
-
-  def update(col, color)
-    row = -1
-    begin
-    while @rows[row][col] != empty_string
-      row -= 1
-    end
-    rescue NoMethodError => e
-      puts "you can't place a checker there"
-    else
-      @rows[row][col] = color
-      @table = TTY::Table.new headers: headers, rows: @rows
-    end
-    print_grid
   end
 
   def print_grid
