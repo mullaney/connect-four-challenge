@@ -4,7 +4,8 @@
 require 'tty-table'
 
 class Board
-  attr_accessor :table
+  attr_reader :table
+  attr_accessor :rows
 
   def initialize
     generate_board
@@ -14,10 +15,9 @@ class Board
   end
 
   def generate_board
-    @table = TTY::Table.new headers, build_rows
   end
 
-  def build_rows
+  def generate_board
     rows = []
     6.times do
       rows << []
@@ -40,6 +40,7 @@ class Board
   end
 
   def print_grid
+    @table = TTY::Table.new headers, @rows
     puts @table.render(:ascii)
   end
 
