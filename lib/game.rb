@@ -7,6 +7,7 @@ class Game
   def initialize
     @board = Board.new
     @current_player = :black
+    @board.print_grid
   end
 
   def start

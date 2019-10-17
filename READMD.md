@@ -16,6 +16,8 @@ First off, we will need a Board class. This class will need some kind of data st
 
 One thing we will need is a way to print out the current status of the board. There is a lot of ways you might do this. For instance you may want to draw the board using regular ASCII characters, perhaps use Xs and Os for the checkers. Or you might want to try to use the [colorize gem](https://github.com/fazibear/colorize) to create a board with red and black colored pieces.
 
+To manage the board display we have included the [tty-table](https://github.com/piotrmurach/tty-table) gem, please refer to their README for more information.
+
 ## Step 3: Make a drop_checker method
 
 The board class will need a method to add a checker to the board. The method should take two arguments, a color (we can use symbols for :red and :black) and a column number.
