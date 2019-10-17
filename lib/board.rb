@@ -15,9 +15,6 @@ class Board
   end
 
   def generate_board
-  end
-
-  def generate_board
     rows = []
     6.times do
       rows << []
