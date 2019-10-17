@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # Use this as a sketch of how your Board class could look, you can fill in these
 # methods, or make a different class from scratch
 require 'tty-table'
@@ -29,7 +28,7 @@ class Board
   end
 
   def empty_string
-    "     ".freeze
+    "".freeze
   end
 
   def headers
@@ -38,7 +37,7 @@ class Board
 
   def print_grid
     @table = TTY::Table.new headers, @rows
-    puts @table.render(:ascii)
+    puts @table.render(:ascii, padding: [1, 2, 1, 2])
   end
 
   def game_won?
