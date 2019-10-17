@@ -12,11 +12,13 @@ If you want to run the game type `ruby connect-four.rb` in the terminal in this 
 
 First off, we will need a Board class. This class will need some kind of data structure to keep track of a playing grid with 7 columns and 6 rows. So your first step will be to create an instance variable to hold this info, and initialize the grid when you make a new instance of the Board class.
 
+In the Board class we have included a method which genarates a multidimensional array to store board state (generate_board). Feel free to replace this with a different method/data structure with your own implementation.
+
 ## Step 2: Make a print_board method
 
 One thing we will need is a way to print out the current status of the board. There is a lot of ways you might do this. For instance you may want to draw the board using regular ASCII characters, perhaps use Xs and Os for the checkers. Or you might want to try to use the [colorize gem](https://github.com/fazibear/colorize) to create a board with red and black colored pieces.
 
-To manage the board display we have included the [tty-table](https://github.com/piotrmurach/tty-table) gem, please refer to their README for more information.
+To manage the board display we have included the [tty-table](https://github.com/piotrmurach/tty-table) gem, please refer to their README for more information. The gem is used in the print_grid method. Again,feel free to replace with a different implementation if you wish, otherwise move to Step 3 and start working on the game logic!
 
 ## Step 3: Make a drop_checker method
 
