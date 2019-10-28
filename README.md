@@ -47,7 +47,7 @@ If you manage to get the game loop working, you may want to add a check at the e
 
 You may want to break this step down into several different methods which check for four in a row horizontally, vertically or diagonally.
 
-## Step #6: Player Bots, a stretch goal
+## Step 6: Player Bots, a stretch goal
 
 If you make it this far, the next step will be to design some player bots which can play the game. Here are some ideas:
 
